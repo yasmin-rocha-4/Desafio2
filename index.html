@@ -3,58 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <address>
-            <p>(225) 555-0118</p>
-            <p>michelle.rivera@example.com</p>
-        </address>
-        <section id="promotion-info">
-            <p>Follow Us and get a chance to win 80% off</p>
-        </section>
-            
-        <section id="redes-sociais">
-            <p>Follow Us: </p>
-            <ul>
-                <li>
-                    <a href="" target="_blank">
-                        <img src="instagram.png" alt="logo instagram" />
-                    </a>
-                </li>
-                <li>
-                    <a href="" target="_blank">
-                        <img src="youtube.svg" alt="logo youtube" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.exemplo.com" target="_blank">
-                        <img src="facebook.svg" alt="logo facebook" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.exemplo.com" target="_blank">
-                        <img src="twitter.svg" alt="logo twitter" />
-                    </a>
-                </li>
-            </ul>
-        </section>
-        
-        <nav>
-            <p>Bandage</p>
-            <ul>
-               <li><a href="#home">Home</a></li> 
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#pages">Pages</a></li>
-            </ul>
-            
-            <a href="">Login</a>
-            <a href="">Register</a>
-        </nav>
+        <section id="promotional">
+            <address class="contato-header">
+                <p>(225) 555-0118</p>
+                <p>michelle.rivera@example.com</p>
+            </address>
+            <section id="promotion-info">
+                <p>Follow Us and get a chance to win 80% off</p>
+            </section>
+                
+            <section id="redes-sociais" class="redes-sociais">
+                <p class="follow">Follow Us : </p>
+                <ul class="imagens-redes-sociais">
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="instagram.png" alt="logo instagram" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="youtube.svg" alt="logo youtube" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.exemplo.com" target="_blank">
+                            <img src="facebook.svg" alt="logo facebook" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.exemplo.com" target="_blank">
+                            <img src="twitter.svg" alt="logo twitter" />
+                        </a>
+                    </li>
+                </ul>
+            </section>
+    </section>
+        <section id="navegacao">
+            <nav>
+                <div class="aparece-mobile">
+                    <p class="logo">Bandage</p>
+                    <section class="botoes-mobile">
+                        <a class="menu-pesquisa" aria-label="botao pesquisa" aria-expanded="false"><img src="icn search .icn-xs.png" alt=""></a>
+                        <a class="menu-carrinho" aria-label="botao carrinho" aria-expanded="false"><img src="carrinho.png" alt=""></a>  
+                        <a class="menu-toggle" aria-label="botao menu" aria-expanded="false"><img src="menu.png" alt=""></a>
+                    </section>
+                    
+                </div>
+                
+                <ul class="nav-links">
+                <li><a href="#home">Home</a></li> 
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                </ul>
+                <div class="final-nav">
+                    <section id="login-registro" class="login-registro">
+                        <a href="">Login</a>
+                        <a href="">Register</a>
+                        
+                    </section>
+                    <section class="icones-desktop">
+                        <a href=""><img src="pesquisa-azul.svg" alt=""></a>
+                        <a href=""><img src="carrinho-azul.svg" alt=""></a>
+                        <a href=""><img src="coracao.svg" alt=""></a>
+                    </section>
+                </div>
+               
+            </nav>
+    </section>
     </header>
     <main>
         <section id="home">
