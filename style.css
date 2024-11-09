@@ -465,4 +465,92 @@
             }
                    
     }
+
+    .featured-products {
+        text-align: center;
+        padding: 20px;
+        margin: 50px 50px 50px 50px;
+        p{
+            font-weight: 400;
+            color: var(--cor-secundaria-texto);
+            margin-bottom: 30px;
+        }
+        h2{
+            font-weight: 700;
+            color: var(--cor-do-texto);
+        }
+        h4{
+            color: var(--cor-secundaria-texto);
+        }
+    }
+    
+    .product-title {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    .product-category, .product-price {
+        color: var(--cor-secundaria-texto);
+        font-size: 14px;
+    }
+    
+    .old-price {
+        text-decoration: line-through;
+        color: #BDBDBD;
+    }
+    
+    .new-price {
+        color:#23856D;
+        ;
+        font-weight: bold;
+    }
+    
+    #loadMoreBtn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        color:var(--cor-icones);
+        border-radius: 5px;
+        border-color: var(--cor-icones);
+    }
+    
+    #loadMoreBtn:hover {
+        background-color: #0056b3;
+        color: var(--cor-clara-texto);
+    }
+    @media (max-width: 768px) {
+        .product-gallery{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+        }
+        
+    }
+    @media (min-width: 768px) {
+        .product-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .product {
+            width: 200px;
+            text-align: center;
+            overflow: hidden;
+            img {
+                width: 100%;
+                transition: transform 0.3s ease; /* Transição suave */
+                &:hover {
+                    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+                }
+            }
+            
+        }
+        
+    }
+    
 }
