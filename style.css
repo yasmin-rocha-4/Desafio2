@@ -54,9 +54,25 @@
                 display: flex;
             }
             address {
+                
                 font-style: normal;
+                dl {
+                        display: flex;
+                        align-items: center;
+                    
                 
-                
+                        dt {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 20px;
+                            dd {
+                                p{
+                                    margin-left: 0;
+                                }
+                                
+                            }
+                        }
+                    }
             }
             #redes-sociais{
                 
@@ -92,7 +108,7 @@
                     display: flex;
                     flex-direction: row; 
                     p{
-                        margin-left: 1rem;
+                        margin-left: 5px;
                     }
                    
                  } 
@@ -156,20 +172,30 @@
                 /* quando desktop: */
                 @media (min-width: 768px){
                     display: flex;
-                    flex-direction: row;
+                    
                     .nav-links, .logo, #login-registro{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
+                        font-weight: 700;
+                    }
+                    .nav-links{
+                        color: var(--cor-secundaria-texto);
                     }
                     .login-registro{
                         color:var(--cor-icones) ;
+                        a{
+                            img{
+                                margin-right: 7px;
+                            }
+                        }
                         
                     }
                     .icones-desktop{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
+                    
                     }
                     .final-nav{
                         display: flex;
@@ -270,9 +296,7 @@
                 }
  
             }
-            img{
-                
-            }
+
         @media (min-width: 768px) {
             flex-direction: row;
             height: 500px;
