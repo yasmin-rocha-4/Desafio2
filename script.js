@@ -7,18 +7,16 @@ const products = [
     { title: "Graphic Design", category: "English Department", oldPrice: "$15.48", newPrice: "$6.48", imgSrc: "product6.png" },
     { title: "Graphic Design", category: "English Department", oldPrice: "$15.48", newPrice: "$6.48", imgSrc: "product7.png" },
     { title: "Graphic Design", category: "English Department", oldPrice: "$15.48", newPrice: "$6.48", imgSrc: "product8.png" },
-    // Adicione mais produtos conforme necessário
 ];
 
 const productGallery = document.getElementById("product-gallery");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
-let visibleProducts = 6; // Número inicial de produtos visíveis
-let showingAll = false; // Controle para alternar entre "Exibir mais" e "Exibir menos"
+let visibleProducts = 6; 
+let showingAll = false; 
 
 function displayProducts() {
-    productGallery.innerHTML = ""; // Limpa a galeria
+    productGallery.innerHTML = ""; 
 
-    // Mostra os produtos conforme o limite de visibilidade
     products.slice(0, visibleProducts).forEach(product => {
         const productDiv = document.createElement("div");
         productDiv.classList.add("product");
@@ -35,19 +33,17 @@ function displayProducts() {
         productGallery.appendChild(productDiv);
     });
 
-    // Altera o texto do botão conforme a quantidade de produtos exibida
     loadMoreBtn.textContent = showingAll ? "Show less" : "Load more products";
 }
 
-displayProducts(); // Exibe os produtos inicialmente
+displayProducts(); 
 
-// Evento de clique para alternar entre "Exibir mais" e "Exibir menos"
 loadMoreBtn.addEventListener("click", () => {
     if (showingAll) {
-        visibleProducts = 6; // Volta para o número inicial de produtos
+        visibleProducts = 6; 
         showingAll = false;
     } else {
-        visibleProducts = products.length; // Exibe todos os produtos
+        visibleProducts = products.length; 
         showingAll = true;
     }
     displayProducts();

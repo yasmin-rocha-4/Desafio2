@@ -469,6 +469,7 @@
     .featured-products {
         text-align: center;
         padding: 20px;
+        margin: 50px 50px 50px 50px;
         p{
             font-weight: 400;
             color: var(--cor-secundaria-texto);
