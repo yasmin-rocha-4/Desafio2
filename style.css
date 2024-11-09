@@ -224,7 +224,7 @@
                 justify-content: center;
                 margin-left: 40px;
                 main{
-                    
+                    margin-top: 80px;
                     justify-content: center;
                     align-items: center;
                     h1{
@@ -248,7 +248,7 @@
                         color: #2A7CC7;
                         font-size: 16px;
                         font-weight: bold;
-                        margin-bottom: 40px;
+                        margin-bottom: 20px;
                         
                     }
                     .botao{       
@@ -268,6 +268,9 @@
                         }
 
                 }
+ 
+            }
+            img{
                 
             }
         @media (min-width: 768px) {
@@ -314,7 +317,7 @@
                     font-size: 16px;
                     font-weight: bold;
                     margin-bottom: 40px;
-                    text-align: left;
+                    padding-left: 3.5px;
                     
                 }
                 .botao{ 
