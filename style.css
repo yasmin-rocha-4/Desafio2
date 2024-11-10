@@ -588,4 +588,80 @@
         
     }
     
+        #OQueFazemos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 50px 50px 50px;
+            .texto{
+                display: flex;
+                flex-direction: column;
+               
+                color: var(--cor-secundaria-texto);
+                text-align: left; /* Garante que o texto dos parágrafos esteja alinhado à esquerda */
+                font-weight: 400;
+                flex: 1.5; 
+                margin: 0 20px 0 20px;
+                p{
+                    align-items: center;
+                    color: var(--cor-secundaria-texto);
+                    text-align: left;
+                    font-weight: 400;
+                    font-size: 16px;
+                    &:first-child{
+                        align-self: flex-start;
+                        margin-bottom: 15px;
+                        color: var(--cor-icones);
+                        font-weight: 700;
+                        
+                    }
+                    &:not(:first-child){
+
+                        margin-bottom: 10px;
+                    }
+                }
+                    
+                h2{
+                    
+                    color: var(--cor-do-texto);
+                    font-weight: 700;
+                    font-size: 40px;
+
+                }
+
+            }
+            .imagens{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                
+                img{
+                    width: 100%; 
+                    max-width: 300px; 
+                    height: auto;
+                    object-fit: cover;
+                }
+                
+            }
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+                .imagens{
+                    order: 1;
+                    
+                }
+                .texto{
+                    order: 2;
+                    flex: 1.5; /* A segunda coluna com o texto ocupa mais espaço */
+                    text-align: left;
+                    margin-right: 100px;
+
+                }
+    
+            }
+        }
+    
 }
