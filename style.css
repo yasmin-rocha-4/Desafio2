@@ -1,4 +1,4 @@
-@layer reset, base,navigation, components;
+@layer reset,base,navigation,components;
 
 @layer reset{
     *{
@@ -56,7 +56,7 @@
             address {
                 
                 font-style: normal;
-                dl {
+                dl{
                         display: flex;
                         align-items: center;
                     
@@ -390,7 +390,30 @@
         
     }
     #top-products{
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+         
+            margin: 50px;
+            width: 90%;
+            article{
+                position: relative;
+                overflow: hidden;
+            }
+            img{
+                width: 80%;
+                align-items: center;
+                margin-bottom: 20px;
+                object-fit: cover;
+                display: block;
+            }
+            .banner-product{
+                position: absolute;
+                bottom: 20px;
+            }
+        }
 
+        @media (min-width: 768px) {
             display: grid;
             grid-template-columns: 2fr 1fr;
             grid-template-rows: repeat(2, 1fr);
@@ -398,7 +421,6 @@
             margin: 50px;
             width: 90%;
             max-width: 1200px;
-            
             gap: 20px;
             article{
                 position: relative;
@@ -409,6 +431,7 @@
                 height: 100%;
                 object-fit: cover;
                 display: block;
+                
             } 
             .banner1{
                 grid-column: span 1 / span 2;
@@ -428,6 +451,7 @@
                     
                 }
                 .banner-product{
+
                     p{
                         padding-left: 15px;
                     }
@@ -436,33 +460,44 @@
             .banner-product{
                 position: absolute;
                 bottom: 0;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 290px;
-                height: 180px;
-                background-color: var(--cor-hover);
-                color: var(--cor-clara-texto);
-                p{
-                    
-                    font-weight: 700;
-                    font-size: 20px;
-                    text-align: left;
-                    margin: 0;
-                }
-                a{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    border: solid;
-                    border-width: 1px;
-                    border-radius: 5px;
-                    padding: 10px 25px;
-                }
             }
+            
+            
+        }
+
+        .banner-product{
+            position: absolute;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 290px;
+            height: 180px;
+            background-color: var(--cor-hover);
+            color: var(--cor-clara-texto);
+            &:hover{
+                background-color: #96E9FB80 ;
+            }
+            p{
+                
+                font-weight: 700;
+                font-size: 20px;
+                text-align: left;
+                margin: 0;
+            }
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border: solid;
+                border-width: 1px;
+                border-radius: 5px;
+                padding: 10px 25px;
+            }
+        }
+           
                    
     }
 
