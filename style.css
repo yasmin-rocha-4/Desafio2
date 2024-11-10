@@ -663,5 +663,65 @@
     
             }
         }
+
+        #diferenciais{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--cor-secundaria-texto);
+            text-align: center;
+            margin: 25px 25px 25px 25px;
+             
+            h2,h3{
+                color: var(--cor-do-texto);
+            }
+
+            @media (max-width: 768px) {
+                .diferenciais{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 5rem;
+                }
+                
+            }
+           
+            @media (min-width: 768px) {
+                padding: 3rem 1rem;
+                text-align: center;
+                width: 100%;
+                container-type: inline-size;
+                display: flex;
+                justify-content: center;
+                flex-wrap: 2rem;
+                gap: 2rem;
+                h2{
+                    flex-basis: 100%; /*largura totao flex wraping*/
+                }
+                .div-diferenciais{
+                    margin-top: 50px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    article{
+                        
+                        padding: 10px 30px 10px 30px;
+                        max-width: 400px;
+                        
+                      
+                    }
+                    .diferenciais{
+                        align-items: center;
+                        flex-direction: column;
+                        margin-bottom: 1.5rem;
+                        
+                    }
+
+                }
+                
+            }
+        }
     
 }
