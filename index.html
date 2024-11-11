@@ -463,24 +463,13 @@
                 <h3>Get In Touch</h3>
                 <form action="" method="post">
                     <label for="email"></label>
-                   
-                        <input id="email" type="email" placeholder="Your Email" name="email" class="email-input">
-                        <button id="contactBtn" onclick="validateEmail()"">Subscribe</button>
-                        <div class="success-alert" id="successAlert">
-                            <span class="success-icon">✔️</span>
-                            <span class="success-message">Williamsburg carles vegan helvetica.</span>
-                            <button class="close-button" onclick="closeAlert()">✖️</button>
-                          </div>
-                          <div class="error-alert" id="errorAlert">
-                            <span class="error-icon">⚠️</span>
-                            <span class="error-message">Inclua um "@" no endereço de e-mail. O e-mail está com um "@" faltando.</span>
-                          </div>
-                    
+                    <input id="email" type="email" placeholder="Your Email" name="email" class="email-input">
+                    <a id="contactBtn" onclick="validateEmail()">Subscribe</a>
                 </form>
+                 <!-- Contêiner de alerta abaixo do campo de entrada -->
+                 <div class="alert-container" id="alert-container"></div>
                 <p>Lore imp sum dolor Amit</p>
             </section>
-            
-        </section>
         
     </main>
     <footer>

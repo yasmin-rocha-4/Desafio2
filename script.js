@@ -53,24 +53,46 @@ loadMoreBtn.addEventListener("click", () => {
     }
     displayProducts();
 });
-
-
 function validateEmail() {
     const emailInput = document.getElementById("email").value;
-    const successAlert = document.getElementById("successAlert");
-    const errorAlert = document.getElementById("errorAlert");
-  
-    // Regular expression para validar o formato de email
+    const alertContainer = document.getElementById("alert-container");
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+    
     if (emailPattern.test(emailInput)) {
-      // E-mail válido: exibe o alerta de sucesso e oculta o de erro
-      successAlert.style.display = "flex";
-      errorAlert.style.display = "none";
+        showAlert("Successo! Um email será enviado a você.", "success");
     } else {
-      // E-mail inválido: exibe o alerta de erro e oculta o de sucesso
-      errorAlert.style.display = "flex";
-      successAlert.style.display = "none";
+        showAlert("Email invalido, por favor tente novamente.", "error");
     }
-  }
-  
+}
+
+function showAlert(message, type) {
+    const alertContainer = document.getElementById("alert-container");
+
+    // Limpa qualquer alerta anterior
+    alertContainer.innerHTML = "";
+    alertContainer.style.display = "block";
+
+    // Cria o div de alerta
+    const alert = document.createElement("div");
+    alert.classList.add("alert");
+
+    if (type === "success") {
+        alert.classList.add("alert-success");
+        alert.innerHTML = `
+            <span class="alert-icon">✔️</span>
+            <span>${message}</span>
+        `;
+    } else {
+        alert.classList.add("alert-error");
+        alert.innerHTML = `
+            <span class="alert-icon">❌</span>
+            <span>${message}</span>
+        `;
+    }
+
+    alertContainer.appendChild(alert);
+    setTimeout(() => {
+        alertContainer.style.display = "none";
+    }, 3000);
+}
