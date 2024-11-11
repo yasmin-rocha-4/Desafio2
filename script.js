@@ -1,3 +1,8 @@
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('nav-links');
+    menu.classList.toggle('show');
+});
+
 const products = [
     { title: "Graphic Design", category: "English Department", oldPrice: "$15.48", newPrice: "$6.48", imgSrc: "/imagens-produtos/produto1.png" },
     { title: "Graphic Design", category: "English Department", oldPrice: "$15.48", newPrice: "$6.48", imgSrc: "/imagens-produtos/product2.png" },
@@ -48,3 +53,24 @@ loadMoreBtn.addEventListener("click", () => {
     }
     displayProducts();
 });
+
+
+function validateEmail() {
+    const emailInput = document.getElementById("email").value;
+    const successAlert = document.getElementById("successAlert");
+    const errorAlert = document.getElementById("errorAlert");
+  
+    // Regular expression para validar o formato de email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    if (emailPattern.test(emailInput)) {
+      // E-mail válido: exibe o alerta de sucesso e oculta o de erro
+      successAlert.style.display = "flex";
+      errorAlert.style.display = "none";
+    } else {
+      // E-mail inválido: exibe o alerta de erro e oculta o de sucesso
+      errorAlert.style.display = "flex";
+      successAlert.style.display = "none";
+    }
+  }
+  
